@@ -1,0 +1,54 @@
+I, [2019-06-07T11:39:26.818199 #1]  INFO -- : New topics added to target list: my-topic
+I, [2019-06-07T11:39:26.818282 #1]  INFO -- : Fetching cluster metadata from kafka://kafka:9092
+I, [2019-06-07T11:39:26.821172 #1]  INFO -- : Discovered cluster metadata; nodes: 8da1a6e4cb1a:9092 (node_id=1001)
+I, [2019-06-07T11:39:26.821395 #1]  INFO -- : [[test_my-topic] {}:] Joining group `test_my-topic`
+I, [2019-06-07T11:39:26.821597 #1]  INFO -- : [[test_my-topic] {}:] Will fetch at most 1048576 bytes at a time per partition from my-topic
+I, [2019-06-07T11:39:26.821689 #1]  INFO -- : [[test_my-topic] {}:] Fetching cluster metadata from kafka://kafka:9092
+I, [2019-06-07T11:39:26.826773 #1]  INFO -- : [[test_my-topic] {}:] Joined group `test_my-topic` with member id `test-71de247a-bfe1-4602-b333-5a7cd5c27b61`
+I, [2019-06-07T11:39:26.826853 #1]  INFO -- : [[test_my-topic] {}:] Chosen as leader of group `test_my-topic`
+I, [2019-06-07T11:39:26.829660 #1]  INFO -- : [[test_my-topic] {}:] Discovered cluster metadata; nodes: 8da1a6e4cb1a:9092 (node_id=1001)
+I, [2019-06-07T11:39:26.829794 #1]  INFO -- : [[test_my-topic] {}:] There are no partitions to fetch from, sleeping for 1s
+I, [2019-06-07T11:39:26.831298 #1]  INFO -- : [[test_my-topic] {}:] Partitions assigned for `my-topic`: 0, 5, 8, 2, 9, 4, 1, 6, 7, 3
+I, [2019-06-07T11:39:27.830510 #1]  INFO -- : [[test_my-topic] {my-topic: 0, 5, 8, 2, 9...}:] Seeking my-topic/0 to offset 5
+I, [2019-06-07T11:39:27.830658 #1]  INFO -- : [[test_my-topic] {my-topic: 0, 5, 8, 2, 9...}:] Seeking my-topic/5 to offset 0
+I, [2019-06-07T11:39:27.830771 #1]  INFO -- : [[test_my-topic] {my-topic: 0, 5, 8, 2, 9...}:] Seeking my-topic/8 to offset 0
+I, [2019-06-07T11:39:27.830821 #1]  INFO -- : [[test_my-topic] {my-topic: 0, 5, 8, 2, 9...}:] Seeking my-topic/2 to offset 0
+I, [2019-06-07T11:39:27.830888 #1]  INFO -- : [[test_my-topic] {my-topic: 0, 5, 8, 2, 9...}:] Seeking my-topic/9 to offset 0
+I, [2019-06-07T11:39:27.830960 #1]  INFO -- : [[test_my-topic] {my-topic: 0, 5, 8, 2, 9...}:] Seeking my-topic/4 to offset 0
+I, [2019-06-07T11:39:27.831009 #1]  INFO -- : [[test_my-topic] {my-topic: 0, 5, 8, 2, 9...}:] Seeking my-topic/1 to offset 0
+I, [2019-06-07T11:39:27.831056 #1]  INFO -- : [[test_my-topic] {my-topic: 0, 5, 8, 2, 9...}:] Seeking my-topic/6 to offset 0
+I, [2019-06-07T11:39:27.831104 #1]  INFO -- : [[test_my-topic] {my-topic: 0, 5, 8, 2, 9...}:] Seeking my-topic/7 to offset 0
+I, [2019-06-07T11:39:27.831157 #1]  INFO -- : [[test_my-topic] {my-topic: 0, 5, 8, 2, 9...}:] Seeking my-topic/3 to offset 0
+I, [2019-06-07T11:39:27.831277 #1]  INFO -- : [[test_my-topic] {my-topic: 0, 5, 8, 2, 9...}:] New topics added to target list: my-topic
+I, [2019-06-07T11:39:27.831328 #1]  INFO -- : [[test_my-topic] {my-topic: 0, 5, 8, 2, 9...}:] Fetching cluster metadata from kafka://kafka:9092
+I, [2019-06-07T11:39:27.842441 #1]  INFO -- : [[test_my-topic] {my-topic: 0, 5, 8, 2, 9...}:] Discovered cluster metadata; nodes: 8da1a6e4cb1a:9092 (node_id=1001)
+I, [2019-06-07T11:42:01.825005 #1]  INFO -- : [test_my-topic] {my-topic: 0, 5, 8, 2, 9...}: Fetcher thread exited.
+I, [2019-06-07T11:42:01.825319 #1]  INFO -- : [[test_my-topic] {}:] Disconnecting broker 1001
+I, [2019-06-07T11:42:01.828914 #1]  INFO -- : [[test_my-topic] {}:] Leaving group `test_my-topic`
+I, [2019-06-07T12:12:55.936946 #1]  INFO -- : New topics added to target list: my-topic
+I, [2019-06-07T12:12:55.937047 #1]  INFO -- : Fetching cluster metadata from kafka://kafka:9092
+I, [2019-06-07T12:12:55.940046 #1]  INFO -- : Discovered cluster metadata; nodes: 671c1f67c852:9092 (node_id=1001)
+I, [2019-06-07T12:12:55.940285 #1]  INFO -- : [[test_my-topic] {}:] Joining group `test_my-topic`
+I, [2019-06-07T12:12:55.940514 #1]  INFO -- : [[test_my-topic] {}:] Will fetch at most 1048576 bytes at a time per partition from my-topic
+I, [2019-06-07T12:12:55.940612 #1]  INFO -- : [[test_my-topic] {}:] Fetching cluster metadata from kafka://kafka:9092
+I, [2019-06-07T12:12:55.942613 #1]  INFO -- : [[test_my-topic] {}:] Discovered cluster metadata; nodes: 671c1f67c852:9092 (node_id=1001)
+I, [2019-06-07T12:12:55.942728 #1]  INFO -- : [[test_my-topic] {}:] There are no partitions to fetch from, sleeping for 1s
+I, [2019-06-07T12:12:55.950147 #1]  INFO -- : [[test_my-topic] {}:] Joined group `test_my-topic` with member id `test-5cc1b6ae-9228-44f0-be87-991283cc3123`
+I, [2019-06-07T12:12:55.950209 #1]  INFO -- : [[test_my-topic] {}:] Chosen as leader of group `test_my-topic`
+I, [2019-06-07T12:12:55.952206 #1]  INFO -- : [[test_my-topic] {}:] Partitions assigned for `my-topic`: 0, 5, 8, 2, 9, 4, 1, 6, 7, 3
+I, [2019-06-07T12:12:56.943247 #1]  INFO -- : [[test_my-topic] {my-topic: 0, 5, 8, 2, 9...}:] Seeking my-topic/0 to offset 2
+I, [2019-06-07T12:12:56.943361 #1]  INFO -- : [[test_my-topic] {my-topic: 0, 5, 8, 2, 9...}:] Seeking my-topic/5 to offset 2
+I, [2019-06-07T12:12:56.943417 #1]  INFO -- : [[test_my-topic] {my-topic: 0, 5, 8, 2, 9...}:] Seeking my-topic/8 to offset 2
+I, [2019-06-07T12:12:56.943473 #1]  INFO -- : [[test_my-topic] {my-topic: 0, 5, 8, 2, 9...}:] Seeking my-topic/2 to offset 4
+I, [2019-06-07T12:12:56.943526 #1]  INFO -- : [[test_my-topic] {my-topic: 0, 5, 8, 2, 9...}:] Seeking my-topic/9 to offset 0
+I, [2019-06-07T12:12:56.943574 #1]  INFO -- : [[test_my-topic] {my-topic: 0, 5, 8, 2, 9...}:] Seeking my-topic/4 to offset 2
+I, [2019-06-07T12:12:56.943630 #1]  INFO -- : [[test_my-topic] {my-topic: 0, 5, 8, 2, 9...}:] Seeking my-topic/1 to offset 2
+I, [2019-06-07T12:12:56.943680 #1]  INFO -- : [[test_my-topic] {my-topic: 0, 5, 8, 2, 9...}:] Seeking my-topic/6 to offset 2
+I, [2019-06-07T12:12:56.943746 #1]  INFO -- : [[test_my-topic] {my-topic: 0, 5, 8, 2, 9...}:] Seeking my-topic/7 to offset 2
+I, [2019-06-07T12:12:56.943802 #1]  INFO -- : [[test_my-topic] {my-topic: 0, 5, 8, 2, 9...}:] Seeking my-topic/3 to offset 2
+I, [2019-06-07T12:12:56.943945 #1]  INFO -- : [[test_my-topic] {my-topic: 0, 5, 8, 2, 9...}:] New topics added to target list: my-topic
+I, [2019-06-07T12:12:56.944076 #1]  INFO -- : [[test_my-topic] {my-topic: 0, 5, 8, 2, 9...}:] Fetching cluster metadata from kafka://kafka:9092
+I, [2019-06-07T12:12:56.948439 #1]  INFO -- : [[test_my-topic] {my-topic: 0, 5, 8, 2, 9...}:] Discovered cluster metadata; nodes: 671c1f67c852:9092 (node_id=1001)
+I, [2019-06-07T12:17:16.596477 #1]  INFO -- : [test_my-topic] {my-topic: 0, 5, 8, 2, 9...}: Fetcher thread exited.
+I, [2019-06-07T12:17:16.596772 #1]  INFO -- : [[test_my-topic] {}:] Disconnecting broker 1001
+I, [2019-06-07T12:17:16.601817 #1]  INFO -- : [[test_my-topic] {}:] Leaving group `test_my-topic`
