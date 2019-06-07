@@ -3,7 +3,7 @@ require "water_drop"
 require "json"
 require "logger"
 
-sleep 5
+sleep 10
 
 Person = Struct.new(:id, :name)
 
@@ -17,8 +17,8 @@ kafka = Kafka.new(["kafka:9092"])
 pp kafka.topics
 
 begin
-kafka.delete_topic("my-topic")
-  rescue Kafka::UnknownTopicOrPartition
+  kafka.delete_topic("my-topic")
+rescue Kafka::UnknownTopicOrPartition
 end
 sleep 5
 
@@ -31,9 +31,8 @@ end
 partitions = kafka.partitions_for("my-topic")
 pp partitions
 
-10.times do
-  people.each do |person|
-    message = { name: person.name }.to_json
-    kafka.deliver_message(message, topic: "my-topic", partition_key: "user##{person.id}")
-  end
+100.times do
+  person = people.sample
+  message = { name: person.name }.to_json
+  kafka.deliver_message(message, topic: "my-topic", partition_key: "user##{person.id}")
 end
