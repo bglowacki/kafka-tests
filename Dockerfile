@@ -4,7 +4,6 @@ RUN gem install bundler
 WORKDIR /app
 COPY Gemfile .
 COPY Gemfile.lock .
-COPY . /app
+COPY . /app/lib/
 RUN bundle install
-
-CMD ["bundle", "exec", "ruby", "publisher.rb"]
+ENTRYPOINT ["bundle", "exec", "ruby"]

@@ -1,0 +1,19 @@
+#!/usr/bin/env ruby
+
+$:.unshift File.join(File.dirname(__FILE__), "../lib")
+$stdout.sync = true
+
+require "event_generator/event_generator"
+require "producer_tester"
+sleep 10
+
+producer_tester = ProducerTester.new
+
+event_generator = EventGenerator::EventGenerator.new
+events = event_generator.call
+
+ENV["NUMBER_OF_RUNS"].to_i.times do |i|
+  producer_tester.call(run_no: i, events: events)
+end
+
+

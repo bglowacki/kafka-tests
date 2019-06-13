@@ -7,14 +7,9 @@ services:
       context: .
     volumes:
       - ${PWD}:/app
-  consumer:
-    image: "kafka-publisher:latest"
-    build:
-      dockerfile: Dockerfile
-      context: .
-    volumes:
-      - ${PWD}:/app
-    command: bash -c "sleep 20 && bundle exec karafka s"
+    env_file:
+      - .env
+    command: "bin/producer_tester_runner"
   zookeeper:
     image: 'bitnami/zookeeper:latest'
     ports:

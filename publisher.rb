@@ -13,24 +13,6 @@ people = []
   people << Person.new(i, "User #{i}")
 end
 
-kafka = Kafka.new(["kafka:9092"])
-pp kafka.topics
-
-begin
-  kafka.delete_topic("my-topic")
-rescue Kafka::UnknownTopicOrPartition
-end
-sleep 5
-
-begin
-  kafka.create_topic("my-topic", num_partitions: 10)
-  sleep 5
-rescue Kafka::TopicAlreadyExists
-end
-
-partitions = kafka.partitions_for("my-topic")
-pp partitions
-
 100.times do
   person = people.sample
   message = { name: person.name }.to_json
