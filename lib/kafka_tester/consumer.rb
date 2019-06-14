@@ -17,7 +17,7 @@ class App < Karafka::App
     config.kafka.seed_brokers = ["kafka://kafka:9092"]
     config.client_id = "test"
     config.logger = Logger.new(STDOUT, level: 1)
-    config.kafka.fetcher_max_queue_size = 500
+    config.kafka.fetcher_max_queue_size = 1000
   end
   
   consumer_groups.draw do
