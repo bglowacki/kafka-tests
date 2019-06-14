@@ -1,22 +1,20 @@
-require "kafka_tester/setupper"
 require "kafka_tester/producer"
 require "benchmark"
+require "producer"
 
 class ProducerTester
-  attr_reader :producer, :event_generator, :setupper
+  attr_reader :producers
   
-  def initialize(
-      setupper: KafkaTester::Setupper.new,
-      producer: KafkaTester::Producer.new
-  )
-    @producer = producer
-    setupper.call
+  def initialize(producers: [])
+    @producers = producers
   end
   
   def call(run_no:, events:)
     Benchmark.bm(20) do |bm|
-      bm.report("Producer run: #{run_no}") do
-        producer.call(events: events)
+      producers.each do |producer|
+        bm.report("#{producer.name} Producer run: #{run_no}") do
+          producer.call(events: events)
+        end
       end
     end
   end

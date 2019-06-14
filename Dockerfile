@@ -6,4 +6,4 @@ COPY Gemfile .
 COPY Gemfile.lock .
 COPY . /app/lib/
 RUN bundle install
-ENTRYPOINT ["bundle", "exec", "ruby"]
+ENTRYPOINT ["bundle", "exec"]

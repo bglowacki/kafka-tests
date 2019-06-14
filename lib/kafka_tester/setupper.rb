@@ -24,3 +24,6 @@ module KafkaTester
     end
   end
 end
+
+sleep 10
+KafkaTester::Setupper.new.call

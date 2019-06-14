@@ -1,6 +1,6 @@
 module EventGenerator
   User = Struct.new(:id)
-  Event = Struct.new(:user_id, :event_number)
+  Event = Struct.new(:user_id, :event_id)
   
   class EventGenerator
     attr_reader :number_of_events, :number_of_users
@@ -17,11 +17,11 @@ module EventGenerator
     private
 
     def events
-      @events ||= users.flat_map do |user|
+      @events ||= users.map do |user|
         number_of_events.times.map do |i|
           Event.new(user.id, i)
         end
-      end.shuffle
+      end.shuffle.flatten
     end
 
     def users

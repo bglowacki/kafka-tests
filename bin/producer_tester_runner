@@ -7,9 +7,14 @@ require "event_generator/event_generator"
 require "producer_tester"
 sleep 10
 
-producer_tester = ProducerTester.new
 
+producers = [
+    Producer.new("Kafka", KafkaTester::Producer.new)
+]
+
+producer_tester = ProducerTester.new(producers: producers)
 event_generator = EventGenerator::EventGenerator.new
+
 events = event_generator.call
 
 ENV["NUMBER_OF_RUNS"].to_i.times do |i|
