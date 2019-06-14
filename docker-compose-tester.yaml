@@ -1,12 +1,12 @@
 version: '2'
 networks:
-  kafka_kafka-net:
+  kafka-tests_kafka-net:
     external: true
 services:
   publisher:
     image: "event-tester:latest"
     networks:
-      - kafka_kafka-net
+      - kafka-tests_kafka-net
     build:
       dockerfile: Dockerfile
       context: .
@@ -18,7 +18,7 @@ services:
   kafka_consumer:
     image: "event-tester:latest"
     networks:
-      - kafka_kafka-net
+      - kafka-tests_kafka-net
     build:
       dockerfile: Dockerfile
       context: .
