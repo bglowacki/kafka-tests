@@ -1,7 +1,7 @@
 require 'terminal-table'
 
 
-class CheckEventOrder
+class ReportStats
   attr_reader :events, :grouped_events
   
   def initialize(events:)

@@ -1,4 +1,4 @@
-require "check_event_order"
+require "report_stats"
 
 $received_events = Hash.new { |h, k| h[k] = [] }
 
@@ -11,4 +11,4 @@ def every( time )
   }
 end
 
-every(15) { CheckEventOrder.call($received_events.values.flatten) }
+every(15) { ReportStats.call($received_events.values.flatten) }
